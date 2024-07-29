@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "user-service"
+version = "0.1.0"
+description = "The user_service is a microservice which consists of code describes user domain model. This microservice will have student, teacher and administrator entities, necessary value objects, services and events"
+authors = ["Roman Gromov"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "^8.3.1"
+setuptools = "^71.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
