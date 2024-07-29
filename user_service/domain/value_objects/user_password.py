@@ -32,10 +32,10 @@ class UserPasswordValidator:
 
         if not unique_symbols.intersection(self.UPPERCASE_LETTERS):
             raise NoUppercaseLettersInPassword()
-        
+
         if not unique_symbols.intersection(self.SPECIAL_SYMBOLS):
             raise NoSpecialSymbolsInPassword()
-        
+
         if not unique_symbols.intersection(self.DIGITS):
             raise NoDigitsInPassword()
 
@@ -51,7 +51,7 @@ class UserPassword(BaseValueObject):
 
     def _get_atomic_components(self) -> Tuple[Any]:
         return self.__hashed_value,
-    
+
     def _validate(self, raw_value: str) -> None:
         self.__validator.validate_length(raw_value)
         self.__validator.validate_symbols(raw_value)
