@@ -37,7 +37,7 @@ def test_email_validation_good_length(raw_value: str):
     'raw_value',
     ['email_with_no_server_domain_and_country_domain', '@email_with_no_name_and_country_domain',
      '.email_with_no_name_and_server_domain', 'email_with_no_country_domain@hse', 'email_with_no_server_domain.ru',
-     '@email_with_no_name.ru', '@email_with_two_at@hse.ru', '.email_with_two_dots@hse.ru', '']
+     '@email_with_no_name.ru', '@email_with_two_at@hse.ru', '.email_with_two_dots@hse.ru', '@@@@@', '......']
 )  # Set of different emails which don't have a necessary part of email, e.g. username, server domain or country code
 def test_email_validation_incorrect_structure(raw_value: str):
     with pytest.raises(IncorrectEmailStructure):
